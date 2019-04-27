@@ -24,3 +24,8 @@ for (name, title, phone) in people:
 
 colors = ['red', 'blue', 'green', 'yellow']
 print('Choose ' + ', '.join(colors[:-1]) + ' or ' + colors[-1] + '.')
+
+motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati']
+print(motorcycles)
+motorcycles.remove('ducati')
+print(motorcycles)
