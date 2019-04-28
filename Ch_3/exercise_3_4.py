@@ -19,3 +19,19 @@ guests.insert(0, 'Amy')
 guests.insert(3, 'Rihanna')
 guests.append('Ann')
 invitations()
+
+print('Only two guests are invited for lunch.')
+
+while len(guests) > 2:
+    last_guest = guests.pop()
+    print('Sorry, ' + last_guest + '.')
+print('\n')
+
+for j in guests:
+    print(j + ', see you later!')
+print('\n')
+
+while len(guests) > 0:
+    del guests[0]
+
+print(guests)
