@@ -30,6 +30,7 @@ print('\n')
 for j in guests:
     print(j + ', see you later!')
 print('\n')
+print(len(guests))
 
 while len(guests) > 0:
     del guests[0]
