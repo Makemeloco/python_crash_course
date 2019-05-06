@@ -13,5 +13,5 @@ print("\nMy friend's favorite foods are:")
 for friend_food in friend_foods:
     print(friend_food.title())
 
-print('\nThe last three items in the list are:' + str(my_foods[-3:] ))
-print('\nThe first three items in the list are:' + str(my_foods[:3] ))
+print('\nThe last three items in the list are:' + str(my_foods[-3:]))
+print('\nThe first three items in the list are:' + str(my_foods[:3]))

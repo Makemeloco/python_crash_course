@@ -13,5 +13,5 @@ squares = []
 squares = [value + 3 for value in range(0, 30, 3)]
 print(squares)
 quatros = []
-quatros = [value**3 for value in range(1,11)]
+quatros = [value**3 for value in range(1, 11)]
 print(quatros)
