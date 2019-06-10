@@ -3,6 +3,7 @@ def city_country(city, country):
     full_vars = city + ', ' + country
     return full_vars.title()
 
+
 geo = city_country('voronezh', 'russia')
 print(geo)
 
