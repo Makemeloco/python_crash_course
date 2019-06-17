@@ -24,6 +24,21 @@ class User():
         self.login_attempts = 0
 
 
+class Privileges():
+    """отдельный класс для свойств админа"""
+
+    def __init__(self, privs=(
+            "разрешено добавлять сообщения",
+            "разрешено удалять пользователей",
+            "разрешено банить пользователей")):
+        """инициализируем."""
+        self.privs = privs
+
+    def show_privileges(self):
+        """отображаем информацию о привилегиях админа."""
+        print("The admin can: " + (', '.join(self.privs)) + ".")
+
+
 class Admin(User):
     """класс, описывающий тип пользователя."""
 
@@ -33,25 +48,11 @@ class Admin(User):
         Затем инициализирует атрибуты, специфические для электромобиля.
         """
         super().__init__(first_name, last_name, age, phone)
-        self.privileges = (
-            "разрешено добавлять сообщения", "разрешено удалять пользователей", "разрешено банить пользователей")
-
-    def show_privileges(self):
-        print("The admin can: " + (', '.join(self.privileges)) + ".")
+        self.privileges = Privileges()
 
 
 user = Admin('emma', 'stone', 26, 89595554455)
 
 user.describe_user()
 user.greet_user()
-user.show_privileges()
-user.increment_login_attempts()
-print(user.login_attempts)
-user.increment_login_attempts()
-print(user.login_attempts)
-user.increment_login_attempts()
-print(user.login_attempts)
-user.increment_login_attempts()
-print(user.login_attempts)
-user.reset_login_attempts()
-print(user.login_attempts)
+user.privileges.show_privileges()
