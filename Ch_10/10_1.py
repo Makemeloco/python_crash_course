@@ -24,4 +24,8 @@ with open(filename) as file_object:
 for line in lines:
     print(line.rstrip())
 
+for line in lines:
+    line = line.replace('файл', 'байт')
+    print(line.rstrip())
+
 print(lines)
