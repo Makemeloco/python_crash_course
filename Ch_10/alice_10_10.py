@@ -7,8 +7,8 @@ except FileNotFoundError:
     msg = "Sorry, the file " + filename + " does not exist."
     print(msg)
 else:
-    # Count the approximate number of lines in the file.
-    words = contents.split()
-    num_words = len(words)
-    print("The file " + filename + " has about " + str(num_words) + " words.")
-
+    # We count the number of occurrences of a word or expression.
+    print(contents.count('cat'))
+    print(contents.count('Alice'))
+    print(contents.count('cards'))
+    print(contents.count('the'))
