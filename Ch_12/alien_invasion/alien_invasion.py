@@ -5,7 +5,8 @@ import pygame
 def run_game():
     # Инициализирует игру и создает объект экрана.
     pygame.init()
-    screen = pygame.set_caption("Alien Invasion")
+    screen = pygame.display.set_mode((1200, 800))
+    pygame.display.set_caption("Alien Invasion")
 
     # Запуск основного цикла игры.
     while True:
