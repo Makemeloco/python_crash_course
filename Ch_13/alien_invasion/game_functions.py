@@ -2,6 +2,14 @@ import sys
 import pygame
 from bullet import Bullet
 from alien import Alien
+from star import Star
+
+
+def create_stars(ai_settings, screen, stars):
+    """Создает звёзды."""
+    while len(stars) < ai_settings.stars_allowed:
+        new_star = Star(ai_settings, screen)
+        stars.add(new_star)
 
 
 def get_number_aliens_x(ai_settings, alien_width):
@@ -93,7 +101,7 @@ def check_events(ai_settings, screen, ship, bullets):
             check_keyup_events(event, ship)
 
 
-def update_screen(ai_settings, screen, ship, aliens, bullets):
+def update_screen(ai_settings, screen, ship, aliens, bullets, stars):
     """Обновляет изображения на экране и отображает новый экран."""
     # При каждом проходе цикла прорисовывается экран.
     screen.fill(ai_settings.bg_color)
@@ -102,6 +110,8 @@ def update_screen(ai_settings, screen, ship, aliens, bullets):
         bullet.draw_bullet()
     ship.blitme()
     aliens.draw(screen)
+    for star in stars.sprites():
+        star.draw_star()
 
     # Отображение последнего прорисованного экрана.
     pygame.display.flip()

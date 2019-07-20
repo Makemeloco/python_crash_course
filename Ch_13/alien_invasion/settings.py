@@ -18,3 +18,8 @@ class Settings():
         self.bullet_color = 255, 255, 0
         self.bullets_allowed = 3
 
+        # Параметры звезды
+        self.star_width = 3
+        self.star_height = 3
+        self.star_color = 255, 255, 153
+        self.stars_allowed = 100

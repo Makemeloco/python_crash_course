@@ -17,6 +17,8 @@ def run_game():
     ship = Ship(ai_settings, screen)
     bullets = Group()
     aliens = Group()
+    stars = Group()
+    gf.create_stars(ai_settings, screen, stars)
     # Создание флота пришельцев.
     gf.create_fleet(ai_settings, screen, ship, aliens)
 
@@ -25,7 +27,7 @@ def run_game():
         gf.check_events(ai_settings, screen, ship, bullets)
         ship.update()
         gf.update_bullets(bullets)
-        gf.update_screen(ai_settings, screen, ship, aliens, bullets)
+        gf.update_screen(ai_settings, screen, ship, aliens, bullets, stars)
 
 
 run_game()
