@@ -16,11 +16,12 @@ def run_game():
     # Создание корабля, группы пуль и группы пришельцев.
     ship = Ship(ai_settings, screen)
     bullets = Group()
+    # Создание флота пришельцев.
     aliens = Group()
+    gf.create_fleet(ai_settings, screen, ship, aliens)
+    # Звездное небо над головой.
     stars = Group()
     gf.create_stars(ai_settings, screen, stars)
-    # Создание флота пришельцев.
-    gf.create_fleet(ai_settings, screen, ship, aliens)
 
     # Запуск основного цикла игры.
     while True:

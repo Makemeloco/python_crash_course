@@ -105,13 +105,16 @@ def update_screen(ai_settings, screen, ship, aliens, bullets, stars):
     """Обновляет изображения на экране и отображает новый экран."""
     # При каждом проходе цикла прорисовывается экран.
     screen.fill(ai_settings.bg_color)
+    # Звездное небо.
+    for star in stars.sprites():
+        star.draw_star()
     # Все пули выводятся позади изображений корабля и пришельцев.
     for bullet in bullets.sprites():
         bullet.draw_bullet()
+    # Корабель.
     ship.blitme()
+    # Пришельцы.
     aliens.draw(screen)
-    for star in stars.sprites():
-        star.draw_star()
 
     # Отображение последнего прорисованного экрана.
     pygame.display.flip()

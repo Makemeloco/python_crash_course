@@ -6,7 +6,7 @@ class Settings():
         # Параметры экрана.
         self.screen_width = 1200
         self.screen_height = 800
-        self.bg_color = (0, 25, 51)
+        self.bg_color = (0, 0, 26)
 
         # Настройки корабля.
         self.ship_speed_factor = 1.5
@@ -19,7 +19,7 @@ class Settings():
         self.bullets_allowed = 3
 
         # Параметры звезды
-        self.star_width = 3
-        self.star_height = 3
+        self.star_width = 1
+        self.star_height = 1
         self.star_color = 255, 255, 153
         self.stars_allowed = 100
