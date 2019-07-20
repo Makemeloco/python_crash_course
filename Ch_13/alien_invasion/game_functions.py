@@ -101,6 +101,11 @@ def check_events(ai_settings, screen, ship, bullets):
             check_keyup_events(event, ship)
 
 
+def update_aliens(aliens):
+    """Обновляет позиции всех пришельцев во флоте."""
+    aliens.update()
+
+
 def update_screen(ai_settings, screen, ship, aliens, bullets, stars):
     """Обновляет изображения на экране и отображает новый экран."""
     # При каждом проходе цикла прорисовывается экран.

@@ -23,3 +23,6 @@ class Settings():
         self.star_height = 1
         self.star_color = 255, 255, 153
         self.stars_allowed = 100
+
+        # Настройки пришельцев.
+        self.alien_speed_factor = 1
