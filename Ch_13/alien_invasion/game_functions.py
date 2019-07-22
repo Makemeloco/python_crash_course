@@ -23,8 +23,6 @@ def ship_hit(ai_setting, stats, screen, ship, aliens, bullets):
     sleep(0.5)
 
 
-
-
 def create_stars(ai_settings, screen, stars):
     """Создает звёзды."""
     while len(stars) < ai_settings.stars_allowed:
@@ -158,6 +156,7 @@ def update_aliens(ai_settings, stats, screen, ship, aliens, bullets):
     # Проверка коллизий "пришелец-корабль".
     if pygame.sprite.spritecollideany(ship, aliens):
         ship_hit(ai_settings, stats, screen, ship, aliens, bullets)
+
 
 def update_screen(ai_settings, screen, ship, aliens, bullets, stars):
     """Обновляет изображения на экране и отображает новый экран."""
