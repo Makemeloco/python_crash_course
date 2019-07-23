@@ -1,4 +1,4 @@
-import pygame.ftfont
+import pygame.font
 
 
 class Button():
@@ -20,4 +20,4 @@ class Button():
 
         # Сообщение кнопки создается только один раз.
         self.prep_msg(msg)
-        
+
