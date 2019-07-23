@@ -8,19 +8,19 @@ from star import Star
 
 def ship_hit(ai_setting, stats, screen, ship, aliens, bullets):
     """Обрабатывает столкновение корабля с пришельцем."""
-    # Уменьшение ships_left.
-    stats.ships_left -= 1
-
-    # Очистка списков пришельцев и пуль.
-    aliens.empty()
-    bullets.empty()
-
-    # Создание нового флота и размещение корабля в центре.
-    create_fleet(ai_setting, screen, ship, aliens)
-    ship.center_ship()
-
-    # Пауза.
-    sleep(0.5)
+    if stats.ships_left > 0:
+        # Уменьшение ships_left.
+        stats.ships_left -= 1
+        # Очистка списков пришельцев и пуль.
+        aliens.empty()
+        bullets.empty()
+        # Создание нового флота и размещение корабля в центре.
+        create_fleet(ai_setting, screen, ship, aliens)
+        ship.center_ship()
+        # Пауза.
+        sleep(0.5)
+    else:
+        stats.game_active = False
 
 
 def create_stars(ai_settings, screen, stars):
