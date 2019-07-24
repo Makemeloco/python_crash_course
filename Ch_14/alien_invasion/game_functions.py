@@ -170,7 +170,8 @@ def update_aliens(ai_settings, stats, screen, ship, aliens, bullets):
     check_aliens_bottom(ai_settings, stats, screen, ship, aliens, bullets)
 
 
-def update_screen(ai_settings, screen, ship, aliens, bullets, stars):
+def update_screen(ai_settings, screen, stats, ship, aliens, bullets,
+                  stars, play_button):
     """Обновляет изображения на экране и отображает новый экран."""
     # При каждом проходе цикла прорисовывается экран.
     screen.fill(ai_settings.bg_color)
@@ -184,6 +185,9 @@ def update_screen(ai_settings, screen, ship, aliens, bullets, stars):
     ship.blitme()
     # Пришельцы.
     aliens.draw(screen)
+    # Кнопка Play отображается в том случае, если игра неактивна.
+    if not stats.game_active:
+        play_button.draw_button()
 
     # Отображение последнего прорисованного экрана.
     pygame.display.flip()
