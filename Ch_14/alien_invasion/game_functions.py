@@ -71,7 +71,8 @@ def create_fleet(ai_settings, screen, ship, aliens):
                          row_number)
 
 
-def update_bullets(ai_settings, screen, ship, aliens, bullets):
+def update_bullets(ai_settings, screen, stats, sb, ship, aliens,
+                   bullets):
     """Обновляет позиции пуль и уничтожает старые пули."""
     # Обновление позиций пуль.
     bullets.update()
@@ -79,14 +80,19 @@ def update_bullets(ai_settings, screen, ship, aliens, bullets):
     for bullet in bullets.copy():
         if bullet.rect.bottom <= 0:
             bullets.remove(bullet)
-    check_bullet_alien_collisions(ai_settings, screen, ship, aliens, bullets)
+    check_bullet_alien_collisions(ai_settings, screen, stats, sb,
+                                  ship, aliens, bullets)
 
 
-def check_bullet_alien_collisions(ai_settings, screen, ship, aliens, bullets):
+def check_bullet_alien_collisions(ai_settings, screen, stats, sb,
+                                  ship, aliens, bullets):
     """Обработка коллизий пуль с пришельцами."""
     # Проверка попаданий в пришельцев.
     # При обнаружении попадания удалить пулю и пришельца.
     collisions = pygame.sprite.groupcollide(bullets, aliens, True, True)
+    if collisions:
+        stats.score += ai_settings.alien_points
+        sb.prep_score()
     if len(aliens) == 0:
         # Уничтожение пуль, повышение скорости и создание нового флота.
         bullets.empty()
