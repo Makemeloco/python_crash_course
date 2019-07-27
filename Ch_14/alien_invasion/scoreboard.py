@@ -12,7 +12,7 @@ class Scoreboard():
         self.stats = stats
 
         # Настройки шрифта для вывода счета.
-        self.text_color = (30, 30, 30)
+        self.text_color = (230, 230, 230)
         self.font = pygame.font.SysFont(None, 48)
         # Подготовка исходного изображения.
         self.prep_score()
@@ -30,4 +30,3 @@ class Scoreboard():
     def show_score(self):
         """Выводит счёт на экран."""
         self.screen.blit(self.score_image, self.score_rect)
-
