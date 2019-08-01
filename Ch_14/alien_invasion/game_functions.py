@@ -6,6 +6,13 @@ from alien import Alien
 from star import Star
 
 
+def check_high_score(stats, sb):
+    """Проверяет, появился ли новый рекорд."""
+    if stats.score > stats.high_score:
+        stats.high_score = stats.score
+        sb.prep_high_score()
+
+
 def ship_hit(ai_setting, stats, screen, ship, aliens, bullets):
     """Обрабатывает столкновение корабля с пришельцем."""
     if stats.ships_left > 0:
@@ -94,6 +101,7 @@ def check_bullet_alien_collisions(ai_settings, screen, stats, sb,
         for aliens in collisions.values():
             stats.score += ai_settings.alien_points * len(aliens)
         sb.prep_score()
+        check_high_score(stats, sb)
     if len(aliens) == 0:
         # Уничтожение пуль, повышение скорости и создание нового флота.
         bullets.empty()
