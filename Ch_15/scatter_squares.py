@@ -17,4 +17,5 @@ plt.tick_params(axis='both', which='major', labelsize=14)
 # Назначение диапазона для каждой оси.
 plt.axis([0, 1100, 0, 1100000])
 
+plt.savefig('squares_plot.png', bbox_inches='tight')
 plt.show()
