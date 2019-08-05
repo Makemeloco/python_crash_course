@@ -18,6 +18,10 @@ while True:
     plt.scatter(rw.x_values[-1], rw.y_values[-1], c='yellow',
                 edgecolors='none', s=100)
 
+    # Удаление осей.
+    plt.axes().get_xaxis().set_visible(False)
+    plt.axes().get_yaxis().set_visible(False)
+
     plt.show()
 
     keep_running = input("Make another walk? (y/n): ")
