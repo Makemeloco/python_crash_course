@@ -8,8 +8,11 @@ while True:
     # и нанесение точек на диаграмму.
 
     rw = RandomWalk(50000)
-
     rw.fill_walk()
+
+    # Назначение размера области просмотра.
+    plt.figure(figsize=(10, 6))
+
     point_numbers = list(range(rw.num_points))
     plt.scatter(rw.x_values, rw.y_values, c=point_numbers,
                 cmap=plt.cm.viridis, edgecolor='none', s=1)
