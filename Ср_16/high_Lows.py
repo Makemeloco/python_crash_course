@@ -21,8 +21,9 @@ with open(filename) as f:
 
 # Нанесение данных на диаграмму.
 fig = plt.figure(dpi=128, figsize=(10, 6))
-plt.plot(dates, highs, c='#ff6600')
-plt.plot(dates, lows, c='#3333ff')
+plt.plot(dates, highs, c='#ff6600', alpha=0.5)
+plt.plot(dates, lows, c='#3333ff', alpha=0.5)
+plt.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1)
 
 # Формат диаграммы.
 plt.title("Daily high and low temperatures - 2014", fontsize=24)
