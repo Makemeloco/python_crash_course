@@ -10,5 +10,8 @@ print("Status code:", r.status_code)
 response_dict = r.json()
 print("Total repositories:", response_dict['total_count'])
 
+# Анализ информации о репозиториях.
+
+
 # Обработка результатов.
 print(response_dict.keys())
