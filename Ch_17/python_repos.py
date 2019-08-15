@@ -22,7 +22,7 @@ for repo_dict in repo_dicts:
 
     plot_dict = {
         'value': repo_dict['stargazers_count'],
-        'label': repo_dict['description'],
+        'label': str(repo_dict['description']),
     }
     plot_dicts.append(plot_dict)
 
