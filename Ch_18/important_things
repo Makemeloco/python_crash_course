@@ -17,5 +17,13 @@ learning_log$ ll_env\Scripts\activate
 # Просмотр проекта
 (ll_env)learning_log$ python manage.py runserver
 
-# Команда startapp имя_приложения приказывает Django создать инфраструктуру, необходимую для построения приложения.
+# Команда startapp имя_приложения приказывает Django создать инфраструктуру,
+# необходимую для построения приложения.
 (ll_env)learning_log$ python manage.py startapp learning_logs
+
+# Каждый раз, когда вы захотите изменить данные, которыми управляет Learning
+# Log, выполните эти три действия: внесите изменения в models.py, вызовите
+# makemigrations для learning_logs и прикажите Django выполнить миграцию
+# проекта (migrate).
+(ll_env)learning_log$ python manage.py makemigrations learning_logs
+(ll_env)learning_log$ python manage.py migrate
