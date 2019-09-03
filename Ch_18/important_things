@@ -1,0 +1,21 @@
+# venv
+
+# *nix
+learning_log$ source ll_env/bin/activate
+# win
+learning_log$ ll_env\Scripts\activate
+
+(ll_env)learning_log$ deactivate
+
+(ll_env)learning_log$ pip install Django
+(ll_env)learning_log$ django-admin.py startproject learning_log .
+
+# Создание базы данных
+(ll_env)learning_log$ python manage.py migrate
+
+
+# Просмотр проекта
+(ll_env)learning_log$ python manage.py runserver
+
+# Команда startapp имя_приложения приказывает Django создать инфраструктуру, необходимую для построения приложения.
+(ll_env)learning_log$ python manage.py startapp learning_logs
