@@ -19,6 +19,8 @@
       <sourceFolder url="file://$MODULE_DIR$/Ch_18/learning_log/learning_logs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Ch_18/learning_log/learning_logs/migrations" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Ch_18/learning_log/ll_env" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Ch_18/learning_log/learning_logs/templates" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Ch_18/learning_log/learning_logs/templates/learning_logs" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.7" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
