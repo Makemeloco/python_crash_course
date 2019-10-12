@@ -82,5 +82,5 @@ def edit_entry(request, entry_id):
                                                 args=[topic.id]))
 
 
-context = {'entry': entry, 'topic': topic, 'form': form}
-return render(request, 'learning_logs/edit_entry.html', context)
+    context = {'entry': entry, 'topic': topic, 'form': form}
+    return render(request, 'learning_logs/edit_entry.html', context)
