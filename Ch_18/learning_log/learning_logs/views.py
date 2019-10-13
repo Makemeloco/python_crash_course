@@ -44,6 +44,24 @@ def new_topic(request):
     return render(request, 'learning_logs/new_topic.html', context)
 
 
+def edit_topic(request, topic_id):
+    """Редактирует тему записи."""
+    topic = Topic.objects.get(id=topic_id)
+
+    if request.method != 'POST':
+        # Исходный запрос; форма заполняется данными текущей записи.
+        form = TopicForm(instance=topic)
+    else:
+        # Отправка данных POST; обработать данные.
+        form = TopicForm(instance=topic, data=request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('learning_logs:topics'))
+
+    context = {'topic': topic, 'form': form}
+    return render(request, 'learning_logs/edit_topic.html', context)
+
+
 def new_entry(request, topic_id):
     """Добавляет новую запись по конкретной теме."""
     topic = Topic.objects.get(id=topic_id)
@@ -80,7 +98,6 @@ def edit_entry(request, entry_id):
             form.save()
             return HttpResponseRedirect(reverse('learning_logs:topic',
                                                 args=[topic.id]))
-
 
     context = {'entry': entry, 'topic': topic, 'form': form}
     return render(request, 'learning_logs/edit_entry.html', context)

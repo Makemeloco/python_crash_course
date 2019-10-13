@@ -16,4 +16,6 @@ urlpatterns = [
     # Страница для редактирования записи
     path('edit_entry/<int:entry_id>/', views.edit_entry,
          name='edit_entry'),
+    path('edit_topic/<int:topic_id>/', views.edit_topic,
+         name='edit_topic'),
 ]
