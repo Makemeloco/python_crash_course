@@ -1,1 +1,1 @@
-Задания из книжки, которую я читаю.
+Tasks from the book that I am reading.
