@@ -1,11 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.urls import reverse
-from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 
 
-# Create your views here.
 def register(request):
     """Регистрирует нового пользователя."""
     if request.method != 'POST':
