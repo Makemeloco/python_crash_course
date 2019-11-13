@@ -6,8 +6,8 @@
 
 {% block content %}
 <p>
-    <a href="{% url 'learning_logs:edit_topic' topic.id %}">Edit topic name</a>
-    <a href="{% url 'learning_logs:new_entry' topic.id %}">Add new entry</a>
+    <a href="{% url 'learning_logs:edit_topic' topic.id %}" class="btn btn-info btn-sm">edit topic name</a>
+    <a href="{% url 'learning_logs:new_entry' topic.id %}" class="btn btn-info btn-sm">add new entry</a>
 </p>
 
 {% for entry in entries %}
@@ -16,7 +16,7 @@
         <h3>
             {{ entry.date_added|date:'M d, Y H:i' }}
             <small>
-                <a href="{% url 'learning_logs:edit_entry' entry.id %}">
+                <a href="{% url 'learning_logs:edit_entry' entry.id %}" class="btn btn-info btn-sm">
                     edit entry</a>
             </small>
         </h3>
