@@ -51,8 +51,13 @@ python-dateutil==2.6.1
 python-debian==0.1.32
 python3-xlib==0.15
 pytz==2018.3
+<<<<<<< HEAD
 pyxdg==0.25
 PyYAML==5.1
+=======
+pyxdg==0.26
+PyYAML==3.12
+>>>>>>> pyxdg-0.26
 reportlab==3.4.0
 requests==2.20.0
 requests-unixsocket==0.1.5
