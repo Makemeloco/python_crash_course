@@ -66,7 +66,16 @@ Heroku необходимо знать, от каких пакетов зави�
 
 # Мерджить все фиксы в мастер!!!
 
+стр.449
 
+heroku login
+heroku ps
+heroku open
+
+#Закрепление и отправка изменений
+(ll_env)learning_log$ git commit -am "Set DEBUG=False for Heroku."
+(ll_env)learning_log$ git status
+(ll_env)learning_log$ git push heroku master
 
 
 

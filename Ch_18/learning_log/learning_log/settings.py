@@ -139,8 +139,10 @@ if cwd == '/app' or cwd[:4] == '/tmp':
     # Поддержка заголовка 'X-Forwarded-Proto' для request.is_secure().
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-    # Разрешены все заголовки хостов.
-    ALLOWED_HOSTS = ['*']
+    # Хостом проекта может быть только Heroku.
+    ALLOWED_HOSTS = ['learning-1og.herokuapp.com']
+
+    DEBUG = False
 
     # Конфигурация статических ресурсов
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
